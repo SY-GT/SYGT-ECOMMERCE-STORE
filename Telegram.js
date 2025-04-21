@@ -54,18 +54,6 @@ const cleanUsername = telegramUsername.startsWith('@')
   ? telegramUsername.substring(1) 
   : telegramUsername;
 
-// Send confirmation to client
-const clientMessage = `🎉 Order Received!\n\n` +
-                     `Hi ${firstName},\n` +
-                     `Your order for ${productName} is confirmed.\n` +
-                     `We'll contact you shortly on Telegram.\n\n` +
-                     `Order ID: #${Math.floor(1000 + Math.random() * 9000)}`;
-
-const clientUrl = `https://api.telegram.org/bot${telegramBotToken}/sendMessage?chat_id=@${cleanUsername}&text=${encodeURIComponent(clientMessage)}`;
-
-fetch(clientUrl)
-  .then(() => console.log("Client notification sent successfully"))
-  .catch(err => console.error("Failed to send Telegram notification:", err));
 
   // Close popup
   document.getElementById("instagramPopup").style.display = "none";
