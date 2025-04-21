@@ -1,3 +1,4 @@
+
 // Open Popup
 document.querySelectorAll(".buy-button").forEach(button => {
   button.addEventListener("click", function(e) {
@@ -27,7 +28,8 @@ document.getElementById("dmForm").addEventListener("submit", function(e) {
   const state = document.getElementById("IndianState").value;
 
   // Telegram Bot API Token and Chat ID
- const telegramBotToken = process.env.API;
+ require('dotenv').config();
+  const telegramBotToken = process.env.API;
 const chatId = process.env.CHATID;
   // Message
   const message = `New Order!
