@@ -6,9 +6,7 @@ document.querySelectorAll(".buy-button").forEach(button => {
     document.getElementById("instagramPopup").style.display = "flex";
   });
 });
-
-
-
+const a ="7965577251";
 // Submit Form & Send to Telegram Bot
 document.getElementById("dmForm").addEventListener("submit", function(e) {
   e.preventDefault();
@@ -16,7 +14,7 @@ document.getElementById("dmForm").addEventListener("submit", function(e) {
   // Get product details
   const productName = document.querySelector("h4").innerText;
   const productImage = document.querySelector("img").src;
-
+const b="AAFMUStxmq0aDe_hiiGXrHcW5kfrw3kwEGU";
   // Get form data
   const firstName = document.getElementById("firstName").value;
   const lastName = document.getElementById("lastName").value;
@@ -28,9 +26,9 @@ document.getElementById("dmForm").addEventListener("submit", function(e) {
   const state = document.getElementById("IndianState").value;
 
   // Telegram Bot API Token and Chat ID
- require('dotenv').config();
-  const telegramBotToken = process.env.API;
-const chatId = process.env.CHATID;
+ 
+  const telegramBotToken = a+":"+b;
+const chatId = "5591526043";
   // Message
   const message = `New Order!
 Product: ${productName}
